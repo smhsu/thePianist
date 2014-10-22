@@ -10,10 +10,6 @@ body {
 }
 .navbar-brand {float:none;}
 
-.navbar-collapse {
-	text-align: center;
-}
-
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         display: inline-block;
