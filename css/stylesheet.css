@@ -1,6 +1,11 @@
 body {
 	padding-top: 50px;
 	padding-bottom: 30px;
+
+	background-image: url("../img/piano-light.png");
+    background-position: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
@@ -15,6 +20,8 @@ body {
 	}
 }
 
+/* Home section */
+
 #home {
 	height: 100vh;
 	background-image: url('');
@@ -24,11 +31,11 @@ body {
 
 #pianoimg {
 	height: 50vh;
-	margin-top: 5vh;
+	margin-top: 3vh;
 	margin-bottom: 10vh;
 }
 
-.glyphicon {
+#home .glyphicon {
 	font-size: 10vh
 }
 
@@ -37,22 +44,35 @@ body {
 	margin-left: 3%;
 }
 
-
-a:link {
+#homelinks a:link {
 	color: white;
 }
-a:visited {
+#homelinks a:visited {
     color: white;
 }
-a:hover {
+#homelinks a:hover {
     color: rgb(150,200,255);
 }
-a:active {
+#homelinks a:active {
     color: rgb(150,200,255);
 }
 
-audio {
-	display: block;
+/* About section */
+
+#about {
+	background: linear-gradient(rgb(150,100,200), white);
+}
+
+#about h1 {
+	margin-top: 0
+}
+
+#about .panel {
+	background-color: transparent;
+}
+
+#about h5 {
+	font-weight: bold;
 }
 
 
