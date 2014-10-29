@@ -24,19 +24,21 @@ body {
 
 #home {
 	height: 100vh;
+	padding: 20px;
+	
 	background-image: url('');
 	background-color: rgb(150,100,200);
-	padding: 20px;
+	
 }
 
 #pianoimg {
 	height: 50vh;
-	margin-top: 3vh;
+	margin-top: 5vh;
 	margin-bottom: 10vh;
 }
 
 #home .glyphicon {
-	font-size: 10vh
+	font-size: 10vh;
 }
 
 #homelinks li {
@@ -60,7 +62,7 @@ body {
 /* About section */
 
 #about {
-	background: linear-gradient(rgb(150,100,200), white);
+	background: linear-gradient(rgba(150,100,200,1), rgba(255,255,255,0));
 }
 
 #about h1 {
