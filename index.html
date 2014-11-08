@@ -18,10 +18,11 @@
 	<![endif]-->
 </head>
 <body>
+	<a id="top" class="anchor"></a>
 	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#top" >silas hsu</a>
+				<a data-scroll class="navbar-brand" href="#top">silas hsu</a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -32,9 +33,9 @@
 
 			<div class="collapse navbar-collapse" id="nav-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">about</a></li>
-					<li><a href="#work">work</a></li>
-					<li><a href="#contact">contact</a></li>
+					<li><a data-scroll href="#about">about</a></li>
+					<li><a data-scroll href="#work">work</a></li>
+					<li><a data-scroll href="#contact">contact</a></li>
 				</ul>
 			</div>
 		</div> <!--End container-fluid-->
@@ -44,9 +45,9 @@
 		<div class="container">
 			<img class="img-responsive center-block" alt="piano" id="pianoimg" src="img/piano-clear.png"/>
 			<ul class="list-inline text-center" id="homelinks">
-				<li><a href="#about"><span class="glyphicon glyphicon-user"></span><br>about</a></li>
-				<li><a href="#work"><span class="glyphicon glyphicon-music"></span><br>my work</a></li>
-				<li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span><br>contact/hire</a></li>
+				<li><a data-scroll href="#about"><span class="glyphicon glyphicon-user"></span><br>about</a></li>
+				<li><a data-scroll href="#work"><span class="glyphicon glyphicon-music"></span><br>my work</a></li>
+				<li><a data-scroll href="#contact"><span class="glyphicon glyphicon-envelope"></span><br>contact/hire</a></li>
 			</ul>
 		</div>
 	</div>
@@ -55,9 +56,9 @@
 		<span id="about" class="anchor">about</span>
 		<div class="container">
 			<h1>About</h1>
-			<b>A classical pianist with 15 years of experience.</b><br>
-			Hello - I'm Silas!  Music defines me: I've played piano since I was six years old.  I've won competitions, played in various venues around St. Louis, and more.
-			If you're looking for a good performer, you've found one.
+			<p><b>a classical pianist with 15 years of experience.</b></p>
+			<p>Hello - I'm Silas!  Music defines me: I've played piano since I was six years old.  I've won competitions,
+			played in various venues around St. Louis, and more.  If you're looking for a good performer, you've found one.</p>
 			
 
 			<div class="panel-group" id="accordion">
@@ -241,35 +242,35 @@
 		<span id="contact" class="anchor">contact</span>
 		<div class="contact">
 			<h1>Contact</h1>
-			Questions?  Reach me at shoe.hsuman@gmail.com
+			Questions?  Reach me at <b>shoe.hsuman@gmail.com</b>
 			<h2>Request a performance</h2>
 			
 			<form class="form-horizontal">
 				<div class="form-group">
 					<label for="email" class="col-sm-2">Email address</label>
 					<div class="col-sm-10">
-						<input type="email" class="form-control" id="email" placeholder="Enter email">
+						<input type="email" class="form-control" id="email" placeholder="enter email">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<label for="when" class="col-sm-2">When is the gig?</label>
 					<div class="col-sm-10">
-						<input type="date" class="form-control" id="when" placeholder="Enter date">
+						<input type="date" class="form-control" id="when" placeholder="enter date">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<label for="where" class="col-sm-2">Where is it?</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="where" placeholder="Enter address">
+						<input type="text" class="form-control" id="where" placeholder="enter address">
 					</div>
 				</div>
 				
 				<div class="form-group">
 					<label for="howlong" class="col-sm-2">How many minutes of music?</label>
 					<div class="col-sm-10">
-						<input type="number" class="form-control" id="howlong" placeholder="Number of minutes">
+						<input type="number" class="form-control" id="howlong" placeholder="number of minutes">
 					</div>
 				</div>
 				
@@ -280,7 +281,7 @@
 					</div>
 				</div>
 				
-				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="submit" class="btn btn-primary">submit</button>
 			</form>
 		</div> <!--End Contact-->
 		
@@ -290,6 +291,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- Smooth scrolling -->
+	<script src="js/smooth-scroll.min.js"></script>
+	<script>
+		smoothScroll.init();
+	</script>
 
 </body>
 </html>

@@ -12,6 +12,7 @@ body {
 
 h1, h2 {
 	font-family: "Forte", "Verdana", Sans-serif;
+	text-transform: lowercase;
 }
 
 .anchor { /* Offset for all local links */
@@ -92,5 +93,11 @@ nav a:hover {
 .about h5 {
 	font-weight: bold;
 }
+.panel-heading {
+	text-transform: lowercase;
+}
 
-
+/* Contact section */
+form {
+	text-transform: lowercase;
+}
