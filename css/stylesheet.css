@@ -6,76 +6,91 @@ body {
     background-position: 100% 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	
+	font-family: "Lucida Sans", "Verdana", Sans-serif;
 }
 
+h1, h2 {
+	font-family: "Forte", "Verdana", Sans-serif;
+}
+
+.anchor { /* Offset for all local links */
+	position: relative;
+	top: -60px;
+	visibility: hidden
+}
+
+/* Navbar */
+.navbar {
+	min-height: 70px;
+}
+
+/* Style the large "silas hsu" */
+.navbar-header {
+	padding-left: 20%;
+}
+.navbar-brand {
+	padding-top: 25px;
+	padding-bottom:45px;
+	font-size: 2em;
+}
+
+/* Style the navbar links */
+nav a {
+	color: white !important;
+}
+nav a:hover {
+	background-color: rgb(75,75,75) !important;
+}
 @media (min-width: 768px) {
-	.navbar .navbar-nav {
-		display: inline-block;
-		float: none;
-		vertical-align: top;
+	.navbar-nav a {
+		padding-top: 25px !important;
+		padding-bottom: 25px !important;
 	}
-
-	.navbar .navbar-collapse {
-		text-align: center;
+	#nav-collapse {
+		padding-right: 20%;
 	}
 }
+
+.navbar-toggle {
+	margin-top: 20px; /* Center button vertically on navbar */
+}
+
 
 /* Home section */
-
-#home {
+.home {
 	height: 100vh;
 	padding: 20px;
-	
-	background-image: url('');
 	background-color: rgb(150,100,200);
-	
 }
-
 #pianoimg {
 	height: 50vh;
 	margin-top: 5vh;
 	margin-bottom: 10vh;
 }
-
-#home .glyphicon {
+.home .glyphicon {
 	font-size: 10vh;
 }
-
 #homelinks li {
 	margin-right: 3%;
 	margin-left: 3%;
 }
-
-#homelinks a:link {
+#homelinks a {
 	color: white;
-}
-#homelinks a:visited {
-    color: white;
 }
 #homelinks a:hover {
     color: rgb(150,200,255);
 }
-#homelinks a:active {
-    color: rgb(150,200,255);
-}
 
 /* About section */
-
-#about {
+.about {
 	background: linear-gradient(rgba(150,100,200,1), rgba(255,255,255,0));
 }
-
-#about h1 {
-	margin-top: 0
-}
-
-#about .panel {
+.about .panel {
 	background-color: transparent;
 }
-
-#about h5 {
+.about h5 {
 	font-weight: bold;
 }
 
 
-/*a.anchor{display: block; position: relative; top: 50px; visibility: hidden;}*/

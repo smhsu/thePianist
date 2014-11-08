@@ -18,9 +18,10 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
+				<a class="navbar-brand" href="#top" >silas hsu</a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -30,17 +31,16 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="nav-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="#top">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#contact">Contact</a></li>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about">about</a></li>
+					<li><a href="#work">work</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 			</div>
 		</div> <!--End container-fluid-->
 	</nav>
 	
-	<div class="container-fluid" id="home">
+	<div class="container-fluid home">
 		<div class="container">
 			<img class="img-responsive center-block" alt="piano" id="pianoimg" src="img/piano-clear.png"/>
 			<ul class="list-inline text-center" id="homelinks">
@@ -51,8 +51,8 @@
 		</div>
 	</div>
 	
-	<a name="about" class="anchor"></a>
-	<div class="container-fluid" id="about">
+	<div class="container-fluid about">
+		<span id="about" class="anchor">about</span>
 		<div class="container">
 			<h1>About</h1>
 			<b>A classical pianist with 15 years of experience.</b><br>
@@ -193,8 +193,8 @@
 	</div> <!--End div container-fluid-->
 		
 	<div class="container">	
-		<a name="work" class="anchor"></a>
-		<div id="work">
+		<span id="work" class="anchor">work</span>
+		<div class="work">
 			<h1>Work</h1>
 			<div class="row">
 				<div class="col-sm-6">
@@ -238,8 +238,8 @@
 			</div> <!--End row-->
 		</div> <!--End work section-->
 	
-		<a name="contact" class="anchor"></a>
-		<div id="contact">
+		<span id="contact" class="anchor">contact</span>
+		<div class="contact">
 			<h1>Contact</h1>
 			Questions?  Reach me at shoe.hsuman@gmail.com
 			<h2>Request a performance</h2>
