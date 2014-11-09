@@ -58,7 +58,6 @@
 			<p><b>a classical pianist with 15 years of experience.</b></p>
 			<p>Hello - I'm Silas!  Music defines me: I've played piano since I was six years old.  I've won competitions,
 			played in various venues around St. Louis, and more.  If you're looking for a good performer, you've found one.</p>
-			
 
 			<div class="panel-group" id="accordion">
 				<div class="panel panel-default">
@@ -192,7 +191,7 @@
 		</div> <!-- End div #container -->
 	</div> <!-- End div container-fluid -->
 		
-	<div class="container">	
+	<div class="container">
 		<span id="work" class="anchor">work</span>
 		<div class="work">
 			<h1>Work</h1>
@@ -208,16 +207,44 @@
 
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
+						
 							<div class="item active embed-responsive embed-responsive-16by9">
 								<iframe class="embed-responsive-item" width="560" height="315" src="http://www.youtube.com/embed/W-5cuiTTHaY" frameborder="0"></iframe>
+								<div class="carousel-caption">
+									<h3>sample 1 <small>Chopin Piano Sonata No. 2, Op. 35, I - <i>Grave – Doppio movimento</i></small></h3>
+									<p></p>
+									<p>
+										Chopin's second piano sonata is perhaps best known for it's third movement funeral march, but its other movements are
+										beautiful as well.  Here, I play the stormy first movement.  The fast pace of this piece and large chords make it
+										technically demanding, and the lyrical sections make it musically demanding as well.
+									</p>
+								</div>
 							</div>
 							<div class="item embed-responsive embed-responsive-16by9">
 								<iframe class="embed-responsive-item" width="420" height="315" src="http://www.youtube.com/embed/mjZ2ggSbNVc" frameborder="0"></iframe>
+								<div class="carousel-caption">
+									<h3>sample 2 <small>Mozart Piano Sonata No. 13, K. 333, all three movements</small></h3>
+									<p>
+										I bring you almost 20 minutes of classical music - memorized!  Mozart's 13th piano sonata is typical of his music, 
+										exploring a wide variety of playful themes.  I find the large number of rapid scales in the third movement (11:26) 
+										the most exciting aspect of this piece.
+									</p>
+								</div>
 							</div>
 							<div class="item embed-responsive embed-responsive-16by9">
 								<iframe class="embed-responsive-item" width="420" height="315" src="http://www.youtube.com/embed/91RvEJxjGr8" frameborder="0"></iframe>
+								<div class="carousel-caption">
+									<h3>sample 3 <small>Chopin Ballade No. 1, Op. 23</small></h3>
+									<p>
+										Perhaps the best known usage of Chopin's first Ballade is in the film <i>The Pianist</i>, when the protagonist plays it for 
+										the Nazi officer that discovers him.  Here, I play the piece for you in full.  The ballade covers all sorts of themes, from
+										tragic to agitated to playful.  Blazing octaves and scales add technical difficulty.  This is another work that takes much
+										prowess to play.
+									</p>
+								</div>
 							</div>
-						</div>
+							
+						</div> <!-- End carousel-inner -->
 					</div> <!-- End carousel-->
 					
 					<!-- Controls -->
@@ -228,23 +255,23 @@
 					</a>		
 				</div> <!--End col-sm-6-->
 				
-				<div class="col-sm-6">
-					<ol>
-						<li>Chopin Piano Sonata No. 2, Op. 35, I - <i>Grave – Doppio movimento</i></li>
-						<li>Mozart Piano Sonata No. 13, K. 333, all three movements</li>
-						<li>Chopin Ballade No. 1, Op. 23</li>
-					</ol>
+				<div class="col-sm-6" id="carousel-caption-col">
+					<!-- Captions go here -->
 				</div>
 				
 			</div> <!-- End row-->
+			
+
 		</div> <!-- End work section-->
 	
 		<span id="contact" class="anchor">contact</span>
 		<div class="contact">
-			<h1>Contact</h1>
-			Questions?  Reach me at <b>shoe.hsuman@gmail.com</b>
-			<h2>Request a performance</h2>
+			<h1>Teach</h1>
+			<p>Not only do I perform, I also teach.  If you have questions about teaching or anything else,
+			shoot me an email at:</p>
+			<p><b>shoe.hsuman@gmail.com</b></p>
 			
+			<h1>Request a performance</h1>
 			<form class="form-horizontal">
 				<div class="form-group">
 					<label for="email" class="col-sm-2">Email address</label>
@@ -285,16 +312,30 @@
 			</form>
 		</div> <!--End Contact-->
 		
-	</div> <!--End container-->
+	</div> <!-- End container that contains work and contact -->
 	
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery is necessary for Bootstrap's JavaScript plugins. -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Smooth scrolling -->
+	
+	<!-- Smooth scrolling.  Many thanks to cferdinandi at https://github.com/cferdinandi/smooth-scroll -->
 	<script src="js/smooth-scroll.min.js"></script>
+	<script> smoothScroll.init(); </script>
+	
+	<!-- Script to get carousel captions to display in another element.  Many thanks to Bass Jobsen - 
+	http://stackoverflow.com/questions/20437925/how-to-place-bootstrap-carousel-image-captions-outside-the-carousel-div -->
 	<script>
-		smoothScroll.init();
+		$(function() {
+			$('.carousel').carousel();
+			var caption = $('div.item:nth-child(1) .carousel-caption');
+			$('#carousel-caption-col').html(caption.html());
+			caption.css('display','none');
+			$(".carousel").on('slide.bs.carousel', function(evt) {
+				var caption = $('div.item:nth-child(' + ($(evt.relatedTarget).index()+1) + ') .carousel-caption');
+				$('#carousel-caption-col').html(caption.html());
+				caption.css('display','none');
+			});
+		});
 	</script>
 
 </body>
