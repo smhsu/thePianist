@@ -97,6 +97,17 @@ nav a:hover {
 	text-transform: lowercase;
 }
 
+/* Work section */
+.carousel-button {
+	padding-left: 0;
+	padding-right: 0;
+	width: 50%
+}
+
+.carousel-button [data-slide=next] {
+	float: right;
+}
+
 /* Contact section */
 form {
 	text-transform: lowercase;
