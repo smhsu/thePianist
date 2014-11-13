@@ -1,12 +1,6 @@
 body {
 	padding-top: 70px;
 	padding-bottom: 30px;
-
-	background-image: url("../img/piano-light.png");
-    background-position: 75% 100%;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	
 	font-family: "Lucida Sans", "Verdana", Sans-serif;
 }
 
